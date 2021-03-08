@@ -9,7 +9,7 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Powered by{' '}
+        Desarrollado por: {' '}
         <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
       </a>
     </footer>
