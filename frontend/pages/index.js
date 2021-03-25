@@ -1,10 +1,37 @@
 import Head from 'next/head'
 import Card from "src/components/card"
 import Footer from 'src/components/footer'
+import {useEffect, useState} from "react"
 
 
 
 export default function Home() {
+  const [data,setData] = useState([]);
+
+  const getData=()=>{
+    fetch('http://localhost:9000/testAPI'
+    ,{
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    }
+    )
+      .then(function(response){
+        console.log(response)
+        return response.json();
+      })
+      .then(function(myJson) {
+        console.log(myJson);
+        setData(myJson)
+      });
+  }
+  
+  useEffect(()=>{
+    getData()
+  },[])
+
+
   return (
     <div className="container">
       <Head>
