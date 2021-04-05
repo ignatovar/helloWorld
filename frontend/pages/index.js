@@ -6,30 +6,7 @@ import {useEffect, useState} from "react"
 
 
 export default function Home() {
-  const [data,setData] = useState([]);
 
-  const getData=()=>{
-    fetch('http://localhost:3001/comics'
-    ,{
-      headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }
-    }
-    )
-      .then(function(response){
-        console.log(response)
-        return response.json();
-      })
-      .then(function(myJson) {
-        console.log(myJson);
-        setData(myJson)
-      });
-  }
-  
-  useEffect(()=>{
-    getData()
-  },[])
 
 
   return (
@@ -49,10 +26,8 @@ export default function Home() {
         </p>
 
         <div className="grid pb-6">
-          <Card link={"https://nextjs.org/learn"} title={"Ejemplo"} description={"ESTO ES UN EJEMPLO"} dato={4} />
-          <Card link={"https://nextjs.org/learn"} title={"Urus"} description={"ESTO ES UN EJEMPLO2"} dato={3}/>
-          <Card link={"https://nextjs.org/learn"} title={"Ejemplo2"} description={"ESTO ES UN EJEMPLO2"} dato={5} />
-          <Card link={"https://nextjs.org/learn"} title={"Ejemplo2"} description={"ESTO ES UN EJEMPLO2"} dato={7}/>
+          <Card isbn={"01"} />
+
         </div>
       </main>
 

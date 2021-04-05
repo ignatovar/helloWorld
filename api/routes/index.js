@@ -7,14 +7,14 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.get("/test", function(req, res, next)
+router.get("/perritos", function(req, res, next)
     {
         res.json(
             
             {
                 "comics": {
                   "data": [
-                    {"author":"Juan Daniel",
+                    {"author":"Juan Daniel 2",
                     "numPages":4,
                     "description":"This comic is about....",
                     "imageFile":"http://drive.google.comIdsasdassdad"
