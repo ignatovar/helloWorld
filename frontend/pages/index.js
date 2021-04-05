@@ -9,7 +9,7 @@ export default function Home() {
   const [data,setData] = useState([]);
 
   const getData=()=>{
-    fetch('http://localhost:9000/testAPI'
+    fetch('http://localhost:3001/comics'
     ,{
       headers : { 
         'Content-Type': 'application/json',
